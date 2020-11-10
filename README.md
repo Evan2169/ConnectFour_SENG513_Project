@@ -1,9 +1,3 @@
-SENG 513 Individual Project
-
-Student: Evan Hampton
-UCID: 10172374
-Date: Apr. 19th, 2020
-
 RUNNING THE SERVER
 Navigate to the top-level directory of the project.
 $cd $PATH/ConnectFour
@@ -17,6 +11,5 @@ My project is hardcoded to run on localhost:8080. To change this, adjustments wo
 
 NOTE
 - All other dependencies should be installed automatically. I tried to get ts-node to not need extra installation steps, but couldn't get it working.
-- Opening my project in multiple windows/tabs of the same browser will break it. If it is run in different browsers or on different machines, it will work dandy. It does not seem to work on my phone (Samsung Galaxy S6 in Chrome), with the problem seeming to come from Websockets not working properly.
+- Opening my project in multiple windows/tabs of the same browser will break it. If it is run in different browsers or on different machines, it will work dandy.
 - Code got a little sloppy with the last bit of functionality that I was working on. "ConnectFourGame.ts" and "GameMapper.ts" are unnecessarily coupled and a little tough to read.
-- I was able to run my server on the CPSC Linux machines following the steps I've provided.
