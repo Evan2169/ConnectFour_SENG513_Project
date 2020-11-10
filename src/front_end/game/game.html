@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evan's Connect Four</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+	<link rel="stylesheet" type="text/css" href="files/game.css">
+
+	<meta charset="utf-8">
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+	<script type="text/javascript" src="files/game.js"></script>
+</head>
+<body>	
+	<div class="container" id="game_area">
+    <table>
+      <tr>
+        <th>
+          <button type="button" class="column_selector" id="column_zero"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_one"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_two"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_three"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_four"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_five"><b>\/</b></button>
+        </th>
+        <th>
+          <button type="button" class="column_selector" id="column_six"><b>\/</b></button>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_5_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_5_col_6"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_4_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_4_col_6"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_3_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_3_col_6"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_2_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_2_col_6"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_1_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_1_col_6"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="rounded-circle" id="row_0_col_0"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_1"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_2"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_3"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_4"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_5"></div>
+        </td>
+        <td>
+          <div class="rounded-circle" id="row_0_col_6"></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="container">
+    <h2 id="turn_text"></h2>
+  </div>
+  <div class="container" id="color_info">
+    <h5>Your Colour</h5>
+    <div class="rounded-circle" id="color_info_circle"></div>
+  </div>
+  <div class="container" id="theme_picker">
+    <input type="radio" id="sky" name="theme" value="sky">
+    <label for="sky">Sky</label><br>
+    <input type="radio" id="forest" name="theme" value="forest">
+    <label for="forest">Forest</label><br>
+    <input type="radio" id="earth" name="theme" value="earth">
+    <label for="earth">Earth</label><br>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+body {
+	background-color: #b7d7e8;
+	color: #fff;
+}
+
+#theme_picker {
+	position: fixed;
+	bottom: 0;
+}
+
+#game_area {
+  	margin-top: 100px;
+	background-color: #87bdd8;
+	height: 500px;
+	width: 600px;
+	padding: 0;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+}
+
+th {
+	background-color: #b7d7e8;
+}
+
+.column_selector {
+	border-radius: 12px;
+	background-color: #b7d7e8;
+	color: #fff;
+	margin: auto;
+	width: 100%;
+	height: 30px;
+}
+
+td {
+	border: 3px solid #cfe0e8;
+	padding: 0;
+}
+
+.rounded-circle {
+	background-color: #fff;
+	height: 65px;
+	width: 65px;
+	margin: auto;
+}
+
+#turn_text {
+	margin-top: 50px;
+	text-align: center;
+}
+
+#color_info {
+	position: fixed;
+	bottom: 0;
+	float: right;
+	right: 0;
+}
+
+#color_info h5 {
+	color: #fff;
+	margin-right: 0;
+	text-align: right;
+}
+
+#color_info_circle {
+	background-color: darkblue;
+	margin-right: 0;
+}

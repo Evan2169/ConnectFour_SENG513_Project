@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Evan's Connect Four</title>
+	<meta charset="utf-8">
+	
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">	
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous">
+  </script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+  <div class="container" id="title">
+    <h1>Evan's Connect Four</h1>
+  </div>	
+	<div class="container" id="menu">
+		<div id="menu_carousel" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#menu_carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#menu_carousel" data-slide-to="1"></li>
+        <li data-target="#menu_carousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container" id="create_game_menu">
+            <div class="container" id="create_game_explanation">
+              <h5>Create New Game</h5>
+              <p>By clicking the button below, a new game with a shareable game ID will be created.</p>
+            </div>
+            <button id="create_game_button" data-toggle="modal" data-target="#game_creation_modal">Create</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container" id="join_game_menu">
+            <div class="container" id="join_game_explanation">
+              <h5>Join Existing Game</h5>
+              <p>If you want to join an existing game, enter the game ID into the box below and click 'Join'</p>
+            </div>
+            <input id="join_game_id_entry" autocomplete="off" type="text" value="" />
+            <button id="join_game_button">Join</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container" id="join_random_game_menu">
+            <div class="container" id="join_random_game_explanation">
+              <h5>Join Random Game</h5>
+              <p>By clicking the button below, you will join an existing game against a random opponent.</p>
+            </div>
+            <button id="join_random_game_button" data-toggle="modal" data-target="#join_random_modal">Join</button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#menu_carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#menu_carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+   </div>
+	</div>
+  <div class="container" id="theme_and_username_picker">
+    <p>
+      Username: <span id=username></span>
+      <button type="button" id="username_button" data-toggle="modal" data-target="#username_entry_modal">Change</button>
+    </p>
+    <input type="radio" id="sky" name="theme" value="sky">
+    <label for="sky">Sky</label><br>
+    <input type="radio" id="forest" name="theme" value="forest">
+    <label for="forest">Forest</label><br>
+    <input type="radio" id="earth" name="theme" value="earth">
+    <label for="earth">Earth</label><br>
+  </div>
+  <div class="modal fade" id="username_entry_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Change Username</h5>
+        </div>
+        <div class="modal-body">
+          <p>If you leave the box empty and click 'Save', a new username will be generated for you. It may take a few seconds for this username to generate. Otherwise your username will update to what you have entered.</p>
+          <input id="username_input" autocomplete="off" type="text" value="" />
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="save_username_button">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="game_creation_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Game ID: <span id="game_id"></span></h5>
+        </div>
+        <div class="modal-body">
+          <p>Awaiting other player.</p>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="join_random_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Join Random Game</span></h5>
+        </div>
+        <div class="modal-body">
+          <p>Awaiting other player.</p>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

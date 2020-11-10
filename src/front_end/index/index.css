@@ -1,0 +1,92 @@
+body {
+	background-color: #b7d7e8;
+	color: #fff;
+}
+
+#title {
+	margin-top: 100px;
+	max-width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+#menu {
+  	margin-top: 100px;
+	background-color: #87bdd8;
+	height: 250px;
+	width: 600px;
+}
+
+#menu_carousel {
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-inner {
+	padding-top:20px;
+	text-align: center;
+}
+
+.carousel-inner button {
+	border: 3px solid #fff;
+	border-radius: 12px;
+	background-color: #b7d7e8;
+	color: #fff;
+	margin: auto;
+	width: 20%;
+	display: block;
+}
+
+#create_game_explanation {
+	width: 80%;
+}
+
+#create_game_button {
+	margin-top: 50px;
+}
+
+#join_game_explanation {
+	width: 80%;
+}
+
+#join_game_id_entry {
+	margin-top: 25px;
+}
+
+#join_random_game_explanation {
+	width: 80%;
+}
+
+#join_random_game_button {
+	margin-top: 50px;
+}
+
+#theme_and_username_picker {
+	position: fixed;
+	bottom: 0;
+}
+
+#username_button {
+	padding: 0px 10px;
+	font-size: 12px;
+	border: 3px solid #fff;
+	border-radius: 12px;
+	background-color: #fff;
+	color: #000;
+}
+
+.modal-content {
+	color: #000;
+}
+
+#game_creation_modal .modal-body {
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+}
+
+#join_random_modal .modal-body {
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+}
